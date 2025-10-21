@@ -1,0 +1,17 @@
+[
+  {
+    "name": "KuroNekoFansub",
+    "id": "kuroneko",
+    "version": "1.0.0",
+    "type": "torrent",
+    "accuracy": "high",
+    "ratio": 0,
+    "media": "sub",
+    "languages": [
+      "IT"
+    ],
+    "icon": "https://releases.moe/favicon.png",
+    "update": "gh:SuikoAkari/extensions",
+    "code": "gh:SuikoAkari/extensions/kuroneko"
+  }
+]
