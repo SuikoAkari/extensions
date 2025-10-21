@@ -30,19 +30,17 @@ export default new class KuroNeko extends AbstractSource {
 
   map(data) {
     return data.map(item => {
-      const hash = item.Magnet?.match(/btih:([a-fA-F0-9]+)/)?.[1] || ''
-
       return {
         title: item.title || '',
         link: item.magnet || '',
-        hash,
+        hash: item.hash,
         seeders: parseInt(item.seeders || '0'),
         leechers: parseInt(item.leechers || '0'),
         downloads: parseInt(item.downloads || '0'),
-        size: this.parseSize(item.size),
+        size: item.size,
         date: new Date(item.date),
         verified: item.verified,
-        type: 'alt',
+        type: item.type || "alt",
         accuracy: 'medium'
       }
     })
